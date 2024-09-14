@@ -2,4 +2,5 @@
 
 ## Objective
 Create a database-driven Blazor application that allows the user to view, create, and delete events.
-![Violet-Evergarden_w1_4K_LOGO_97](https://github.com/user-attachments/assets/527da5d7-cc2d-47cc-ae9f-837cd3d31144)
+![event_home](https://github.com/user-attachments/assets/3f7b8605-f8ec-4895-9869-45c6114ce35f)
+![event_add](https://github.com/user-attachments/assets/0f515447-2665-4f1f-9f65-60953952b323)
