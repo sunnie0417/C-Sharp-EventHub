@@ -1,0 +1,59 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EventHub
+build_property.RootNamespace = EventHub
+build_property.ProjectDir = C:\Users\tina1\Desktop\assignment\L2\CST8253_300 Web Programming II\EventHub-sunnie0417\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\tina1\Desktop\assignment\L2\CST8253_300 Web Programming II\EventHub-sunnie0417
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/tina1/Desktop/assignment/L2/CST8253_300 Web Programming II/EventHub-sunnie0417/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tina1/Desktop/assignment/L2/CST8253_300 Web Programming II/EventHub-sunnie0417/Components/Layout/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcRm9vdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tina1/Desktop/assignment/L2/CST8253_300 Web Programming II/EventHub-sunnie0417/Components/Layout/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcSGVhZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tina1/Desktop/assignment/L2/CST8253_300 Web Programming II/EventHub-sunnie0417/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tina1/Desktop/assignment/L2/CST8253_300 Web Programming II/EventHub-sunnie0417/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tina1/Desktop/assignment/L2/CST8253_300 Web Programming II/EventHub-sunnie0417/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tina1/Desktop/assignment/L2/CST8253_300 Web Programming II/EventHub-sunnie0417/Components/Pages/New.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tina1/Desktop/assignment/L2/CST8253_300 Web Programming II/EventHub-sunnie0417/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tina1/Desktop/assignment/L2/CST8253_300 Web Programming II/EventHub-sunnie0417/Components/Shared/EventCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTaGFyZWRcRXZlbnRDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/tina1/Desktop/assignment/L2/CST8253_300 Web Programming II/EventHub-sunnie0417/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 

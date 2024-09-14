@@ -1,0 +1,38 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@inject IConfiguration Config
+@* @using EventCard *@
+
+
+<PageTitle>EventHub | Events</PageTitle>
+
+<div class="row">
+    @foreach (var evt in events)
+    {
+        <EventCard Id=@evt.Id Title=@evt.Title Date="evt.Date" Email=@evt.Email OnDelete="HandleDelete" />
+    }
+</div>
+
+@code {
+    private List<Event> events = new List<Event>();
+    private DataService? ds;
+    protected override async Task OnInitializedAsync()
+    {
+        ds = new(Config.GetConnectionString("default")!);
+        events = await GetEventsAsync();
+    }
+
+    private async Task<List<Event>> GetEventsAsync()
+    {
+        var sql = "SELECT * FROM event";
+        return await ds!.LoadData<Event, dynamic>(sql, new { });
+    }
+
+    private async Task HandleDelete(int id)
+    {
+        events = events.Where(e => e.Id != id).ToList();
+        var sql = "DELETE FROM event WHERE Id = @Id";
+        await ds!.LoadData<Event, dynamic>(sql, new {Id = id});
+        StateHasChanged(); 
+    }
+}

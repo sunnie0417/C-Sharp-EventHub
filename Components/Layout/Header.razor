@@ -1,0 +1,22 @@
+﻿@inject NavigationManager Navigator
+
+<div class="row p-5 mb-3">
+  <div class="col">
+    <h1 class="display-4"><a href="/" class="text-body text-decoration-none">EventHub</a></h1>
+  </div>
+  <div class="col d-flex align-items-center justify-content-end">
+    @if (!url.Contains("/new"))
+    {
+    <a href="/new" class="btn btn-secondary">&plus;</a>
+    }
+  </div>
+</div>
+
+
+@code {
+  private string url = string.Empty;
+  protected override void OnInitialized()
+  {
+    url = Navigator.Uri;
+  }
+}

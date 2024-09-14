@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "A6Oh8Nkk1YwX4g6kY9x2RwgMX4e2X6fv7fLafjd+Z5I=",
+  "Source": "EventHub",
+  "BasePath": "_content/EventHub",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EventHub\\wwwroot",
+      "Source": "EventHub",
+      "ContentRoot": "C:\\Users\\tina1\\Desktop\\assignment\\L2\\CST8253_300 Web Programming II\\EventHub-sunnie0417\\wwwroot\\",
+      "BasePath": "_content/EventHub",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\tina1\\Desktop\\assignment\\L2\\CST8253_300 Web Programming II\\EventHub-sunnie0417\\wwwroot\\app.css",
+      "SourceId": "EventHub",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tina1\\Desktop\\assignment\\L2\\CST8253_300 Web Programming II\\EventHub-sunnie0417\\wwwroot\\",
+      "BasePath": "_content/EventHub",
+      "RelativePath": "app.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\tina1\\Desktop\\assignment\\L2\\CST8253_300 Web Programming II\\EventHub-sunnie0417\\wwwroot\\favicon.png",
+      "SourceId": "EventHub",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\tina1\\Desktop\\assignment\\L2\\CST8253_300 Web Programming II\\EventHub-sunnie0417\\wwwroot\\",
+      "BasePath": "_content/EventHub",
+      "RelativePath": "favicon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    }
+  ]
+}

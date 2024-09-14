@@ -1,0 +1,53 @@
+﻿@using EventHub.Components.Shared
+@inject IConfiguration Config
+
+
+<div class="col col-lg-4">
+    <div class="card m-3">
+        <div class="card-img-top bg-secondary-subtle fs-1 d-grid justify-content-center align-content-center p-5">
+            <i class="bi bi-calendar-check"></i>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title mb-3">@Title</h5>
+            <p class="card-text text-danger mb-3">@Date.ToString("dddd, MMMM d, yyyy");</p>
+            <h6 class="card-subtitle mb-2 text-muted">@Email</h6>
+            <div class="d-flex justify-content-center mt-5">
+                <button class="btn btn-sm btn-danger" @onclick="DeleteEvent">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public string? Title { get; set; }
+    [Parameter]
+    public DateTime Date { get; set; }
+    [Parameter]
+    public string? Email { get; set; }
+    [Parameter]
+    public int Id { get; set; }
+
+    [Parameter]
+    public EventCallback<int> OnDelete { get; set; }
+    private List<Event> events = new List<Event>();
+    private DataService? ds;
+    protected override async Task OnInitializedAsync()
+    {
+        ds = new(Config.GetConnectionString("default")!);
+        events = await GetEventsAsync();
+    }
+
+    private async Task<List<Event>> GetEventsAsync()
+    {
+        var sql = "SELECT * FROM event";
+        return await ds!.LoadData<Event, dynamic>(sql, new { });
+    }
+
+    private async Task DeleteEvent()
+    {
+        await OnDelete.InvokeAsync(Id);
+    }
+
+}

@@ -1,0 +1,67 @@
+﻿@page "/new"
+@rendermode InteractiveServer
+@inject NavigationManager Navigator
+@inject IConfiguration Config
+
+<div class="row">
+    <div class="col">
+        <EditForm Model="@newEvent" FormName="EventForm" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+
+            <div class="p-5 bg-light border border-1">
+                <h2 class="fw-normal text-center mb-3">New Event</h2>
+                <div class="row">
+                    <div class="col-12 col-md-7 mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <InputText id="title" class="form-control mb-1" @bind-Value="newEvent.Title" />
+                        <ValidationMessage For="@(() => newEvent.Title)" />
+                    </div>
+                    <div class="col-12 col-md-5 mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        <InputDate id="date" class="form-control mb-1" @bind-Value="newEvent.Date" />
+                        <ValidationMessage For="@(() => newEvent.Date)" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <InputText id="email" class="form-control mb-1" @bind-Value="newEvent.Email" />
+                        <ValidationMessage For="@(() => newEvent.Email)" />
+                    </div>
+                </div>
+
+                <button class="btn btn-primary me-3" type="submit">Add Event</button>
+                <a href="/" class="btn btn-secondary">Cancel</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    private Event newEvent = new() 
+    {
+        Date = DateTime.Today
+    };
+    private DataService? ds;
+
+    private async Task HandleValidSubmit()
+    {
+        ds = new(Config.GetConnectionString("default")!);
+        var sql = "INSERT INTO event (title, date, email) VALUES (@Title, @Date, @Email)";
+        var parameters = new { Title = newEvent.Title, Date = newEvent.Date, Email = newEvent.Email };
+        await ds.SaveData(sql, parameters);
+        Navigator.NavigateTo("/");
+    }
+
+    public class Event
+    {
+        [Required(ErrorMessage = "The Title field is required.")]
+        [StringLength(100, ErrorMessage = "Title must be less than 100 characters")]
+        public string? Title { get; set; }
+
+        [Required(ErrorMessage = "Date is required.")]
+        public DateTime Date { get; set; }
+
+        [Required(ErrorMessage = "The Email field is required.")]
+        [EmailAddress(ErrorMessage = "Invalid email format")]
+        public string? Email { get; set; }
+    }
+}
